@@ -11776,6 +11776,19 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11788,11 +11801,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span> 
 <span class="n">Image</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../data/zambia-travel.ngsversion.1503413472260.adapt.1900.1.jpg&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -11806,7 +11818,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[1]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -11823,9 +11835,74 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Photo credit: <a href="https://www.nationalgeographic.com/travel/destinations/africa/zambia/">National Geographic Travel Guide</a></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
+<span class="s1">code_show=true; </span>
+<span class="s1">function code_toggle() {</span>
+<span class="s1"> if (code_show){</span>
+<span class="s1"> $(&#39;div.input&#39;).hide();</span>
+<span class="s1"> } else {</span>
+<span class="s1"> $(&#39;div.input&#39;).show();</span>
+<span class="s1"> }</span>
+<span class="s1"> code_show = !code_show</span>
+<span class="s1">} </span>
+<span class="s1">$( document ).ready(code_toggle);</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">&lt;form action=&quot;javascript:code_toggle()&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;View Code&quot;&gt;&lt;/form&gt;&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<script>
+code_show=true; 
+function code_toggle() {
+ if (code_show){
+ $('div.input').hide();
+ } else {
+ $('div.input').show();
+ }
+ code_show = !code_show
+} 
+$( document ).ready(code_toggle);
+</script>
+<form action="javascript:code_toggle()"><input type="submit" value="View Code"></form>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11861,49 +11938,20 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I'll load main dataset with Green House Gas emissions</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;../data/CW_CAIT_GHG_Emissions_31102017.xlsx&#39;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here I&#39;ll load main dataset with Green House Gas emissions...</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;../data/CW_CAIT_GHG_Emissions_31102017.xlsx&#39;</span><span class="p">,</span> 
                    <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;GHG Emissions&#39;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">df_</span><span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/silas/anaconda3/lib/python3.6/site-packages/pandas/core/generic.py:3108: PerformanceWarning:
-
-dropping on a non-lexsorted multi-index without a level parameter may impact performance.
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -11919,7 +11967,7 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -11935,7 +11983,7 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12066,21 +12114,13 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Adding the continents to the dataset for further analysis by stripping from another dataset...</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># extract continents for each country in target dataset </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Adding the continents to the dataset for further analysis by stripping from another dataset...</span>
+<span class="c1"># extract continents for each country in target dataset </span>
 <span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/gapminderDataFiveYear.csv&#39;</span><span class="p">)[[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;continent&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
 <span class="n">df_select</span> <span class="o">=</span> <span class="n">df_</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;level_0&#39;</span><span class="p">:</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;level_1&#39;</span><span class="p">:</span><span class="s1">&#39;year&#39;</span><span class="p">})</span>
 <span class="n">col_lst_select</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;Energy (MtCO2e)&#39;</span><span class="p">,</span> <span class="s1">&#39;Industrial Processes (MtCO2e)&#39;</span><span class="p">,</span>
@@ -12094,21 +12134,13 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I want to clean up the column headers a bit for visual presentation and remove totals as we won't be needing those.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># merge continents with target dataset and clean up columns</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I want to clean up the column headers a bit for visual presentation and remove totals as we won&#39;t be needing those.</span>
+<span class="c1"># merge continents with target dataset and clean up columns</span>
 <span class="n">df_all</span> <span class="o">=</span> <span class="n">df_select</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">col_lst_select</span><span class="p">]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df3</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;continent&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;continent&#39;</span><span class="p">:</span><span class="s1">&#39;Continent&#39;</span><span class="p">,</span><span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="s1">&#39;Year&#39;</span><span class="p">})</span>
 <span class="n">df_all</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_all</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; \(MtCO2e\)&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; \(MtCO2\)&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
 </pre></div>
@@ -12120,10 +12152,103 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_all</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># I&#39;ll save this merged dataset for further analysis.</span>
+<span class="c1"># save target dataset to csv</span>
+<span class="n">df_all</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;ghg.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now to drill down on GHGs related to Zambia, and comparing to its neighbors.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Malawi&#39;</span><span class="p">,</span> <span class="s1">&#39;Zambia&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozambique&#39;</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">select_countries</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">lst</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_select</span> <span class="o">=</span> <span class="n">select_countries</span><span class="p">(</span><span class="n">df_all</span><span class="p">,</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">df_select_piv</span> <span class="o">=</span> <span class="n">df_select</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span> <span class="n">df_select</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_select_piv</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_select_piv</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">df_select_piv</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">country</span><span class="p">],</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">i</span>
+        <span class="p">))</span>
+
+    <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+        <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;stack&#39;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">country</span><span class="o">+</span><span class="s1">&#39; GHG Emissions by Sector&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">fig</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="GHG-Emissions-by-Sector">GHG Emissions by Sector<a class="anchor-link" href="#GHG-Emissions-by-Sector">&#182;</a></h3><h4 id="Zambia">Zambia<a class="anchor-link" href="#Zambia">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span><span class="o">=</span><span class="s1">&#39;Zambia&#39;</span>
+<span class="n">fig1</span> <span class="o">=</span> <span class="n">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
+<span class="n">iplot</span><span class="p">(</span><span class="n">fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;pandas-bar-chart-layout &#39;</span><span class="o">+</span><span class="n">country</span><span class="p">);</span> 
 </pre></div>
 
 </div>
@@ -12136,7 +12261,277 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div id="af24d978-da52-4d25-a538-60a31c1b887c" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("af24d978-da52-4d25-a538-60a31c1b887c", [{"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [20.350706420075735, 20.08076644277506, 19.62082646547439, 18.840886488173727, 18.060946510873052, 17.591006533572386, 16.83798886863971, 16.974971203707035, 16.501953538774362, 15.738935873841685, 15.375918208909011, 16.159294664372414, 16.92267111983582, 17.71604757529922, 18.409424030762622, 19.262800486226023, 19.727368098278003, 19.721935710329983, 20.526503322381963, 21.21107093443394, 21.90563854648592, 22.61821449921078, 23.730790451935643, 24.2333664046605, 24.94594235738536], "name": "Energy"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.24706793080044692, 0.21494118730765874, 0.20479844381487053, 0.20931170032208235, 0.17352095682929417, 0.189026213336506, 0.20418923237848194, 0.21935225142045786, 0.2015392704624338, 0.17273428950440972, 0.20988130854638565, 0.13164785958215966, 0.14501441061793366, 0.21334096165370764, 0.23769951268948164, 0.26572206372525564, 0.3272784146341141, 0.3228827655429727, 0.3368071164518312, 0.5009554673606897, 0.6247998182695482, 0.679465648572712, 0.8587074788758758, 0.9756613091790396, 1.1732231394822035], "name": "Industrial Processes"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [19.633674, 19.7806134, 19.898260699999998, 19.7501548, 19.4031812, 19.0865981, 18.4521784, 18.604739300000002, 20.240681300000002, 18.901160500000003, 18.082118299999998, 19.8786681, 18.1257856, 19.786991699999998, 20.802799900000004, 21.723247500000003, 19.3539132, 20.0657672, 20.477032599999998, 19.4300663, 21.2673536, 20.46748, 21.9379752, 23.1021182, 22.9536775], "name": "Agriculture"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [1.3270733654161584, 1.3644815496763416, 1.4018897339365244, 1.4392979181967076, 1.4767061024568906, 1.5141142867170738, 1.5499880068610625, 1.585861727005051, 1.6217354471490397, 1.6576091672930282, 1.6934828874370171, 1.7236815579630689, 1.7538802284891204, 1.7840788990151721, 1.8142775695412237, 1.8444762400672758, 1.8757239651434638, 1.9069716902196518, 1.9382194152958399, 1.9694671403720279, 2.0007148654482165, 2.0325741092694565, 2.064433353090697, 2.096292596911937, 2.1281518407331768], "name": "Waste"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [355.670863, 355.670863, 355.670863, 355.670863, 355.670863, 355.670863, 385.3620579, 349.2754291, 355.94384279999997, 320.8206469, 363.80640370000003, 335.1824177, 333.07069, 348.2821689, 376.2607323, 433.7613798, 366.8632892, 348.4838261, 369.4462655, 321.25498239999996, 353.60906520000003, 315.5623465, 315.61892800000004, 340.06692720000007, 328.6896731], "name": "Land-Use Change and Forestry"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [18.119241605624527, 17.579964691270305, 17.150687776916083, 16.68141086256186, 16.22213394820764, 15.87285703385342, 15.440723960243263, 15.078590886633105, 14.67645781302295, 14.274324739412792, 13.902191665802638, 14.584255360423608, 15.276319055044581, 15.968382749665551, 16.650446444286523, 17.33251013890749, 17.946905352813076, 18.541300566718657, 19.20569578062424, 19.810090994529823, 20.45448620843541, 20.826960296814025, 21.239434385192645, 21.751908473571262, 22.024382561949878], "name": "Other Fuel Combustion"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.011464814451206898, 0.010801751504758627, 0.010138688558310356, 0.009475625611862087, 0.008812562665413817, 0.008149499718965548, 0.007264908396447108, 0.006380317073928668, 0.005495725751410227, 0.004611134428891787, 0.0037265431063733456, 0.005039303948805255, 0.006352064791237164, 0.007664825633669072, 0.00897758647610098, 0.01029034731853289, 0.010462745464929042, 0.010635143611325195, 0.010807541757721348, 0.0109799399041175, 0.011152338050513652, 0.01125420239675598, 0.011356066742998307, 0.011457931089240633, 0.011559795435482962], "name": "Fugitive Emissions"}], {"barmode": "stack", "title": "Zambia GHG Emissions by Sector"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Zambia emitted 120 million metric tons (MtCO2e) of greenhouse gases in 2011. The land-use change and forestry sector contributed 61 percent to overall emissions, followed by the energy sector (19%), agriculture sector (17%), waste sector (2%) and industrial processes sector (1%). The large share to land-use change and forestry is notable, and requires considering further splitting of this category for monitoring and policy purposes.<a href="https://www.climatelinks.org/resources/greenhouse-gas-emissions-factsheet-zambia">1</a>  Is this the case across all countries for this category? How does Zambia compare to its neighbors in this regard?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Mozambique">Mozambique<a class="anchor-link" href="#Mozambique">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span><span class="o">=</span><span class="s1">&#39;Mozambique&#39;</span>
+<span class="n">fig1</span> <span class="o">=</span> <span class="n">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
+<span class="n">iplot</span><span class="p">(</span><span class="n">fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;pandas-bar-chart-layout &#39;</span><span class="o">+</span><span class="n">country</span><span class="p">);</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div id="ba1e79e5-1e0f-4f9e-97b0-45602dc85534" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("ba1e79e5-1e0f-4f9e-97b0-45602dc85534", [{"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [3.72728892920192, 3.3467239407768665, 3.3261589523518134, 3.3255939639267593, 2.9150289755017056, 2.7944639870766523, 2.765463815263784, 2.906463643450917, 2.8974634716380487, 2.9184632998251816, 3.1194631280123137, 3.15169577763943, 3.2739284272665463, 3.616161076893663, 3.698393726520779, 3.570626376147896, 3.836702468729406, 4.342778561310915, 4.4788546538924265, 4.8949307464739364, 5.221006839055448, 5.713492624477526, 5.565978409899607, 5.948464195321686, 6.920949980743766], "name": "Energy"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.040304, 0.04044066397066232, 0.014929327941324644, 0.011401991911986965, 0.02985865588264929, 0.029995319853311612, 0.11099469403456635, 0.1553540682158211, 0.17406544239707583, 0.19644081657833057, 0.2481281907595853, 0.33981993551559786, 0.5487596802716105, 0.699075425027623, 0.7687831697836356, 0.8348269145396482, 0.8341109299535319, 0.8077469453674155, 0.7923749607812991, 0.7550189761951829, 0.7506389916090666, 0.8039420593528754, 0.9122051270966844, 0.9765001948404933, 1.0810992625843023], "name": "Industrial Processes"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [13.952940000000002, 14.020895000000001, 14.1015101, 14.2118288, 14.2718566, 14.7087768, 14.675249, 13.2261284, 15.118883400000001, 14.272530000000001, 13.0910602, 14.568596900000001, 13.008314500000001, 16.0205824, 14.8438939, 16.1577779, 14.7323111, 16.0523502, 17.548144, 16.0186856, 18.0135118, 15.7440642, 16.4283501, 17.866349800000002, 17.704823], "name": "Agriculture"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.5231714043731551, 0.7796810521502676, 1.0361906999273802, 1.2927003477044927, 1.5492099954816052, 1.8057196432587177, 1.8597789371414446, 1.9138382310241713, 1.9678975249068982, 2.021956818789625, 2.076016112672352, 2.1225073010485076, 2.1689984894246637, 2.2154896778008193, 2.261980866176975, 2.3084720545531305, 2.352168313949736, 2.3958645733463406, 2.439560832742946, 2.4832570921395507, 2.526953351536157, 2.5751701545612415, 2.6233869575863262, 2.6716037606114114, 2.719820563636496], "name": "Waste"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [36.776, 36.776, 36.776, 36.776, 36.776, 36.776, 37.54, 36.664, 37.244, 36.888, 35.619, 36.6413333, 36.7033333, 37.5883333, 36.8093333, 37.8363333, 31.2746667, 31.8766667, 32.3516667, 30.384666700000004, 32.673666700000005, 38.576, 39.954, 39.253, 39.676], "name": "Land-Use Change and Forestry"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [2.87665892920192, 2.5961401407721034, 2.405621352342288, 2.225102563912471, 1.994583775482655, 1.8440649870528385, 1.9012531360356515, 1.9884412850184645, 1.8956294340012776, 1.9028175829840908, 2.120005731966904, 2.0232639634466394, 2.0565221949263752, 2.109780426406111, 2.163038657885847, 2.1962968893655828, 2.236327201632574, 2.3163575138995656, 2.3463878261665565, 2.426418138433548, 2.48644845070054, 2.5252266924965987, 2.5140049342926574, 2.542783176088716, 2.701561417884775], "name": "Other Fuel Combustion"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.00063, 0.0005838000047627202, 0.0005376000095254403, 0.0004914000142881604, 0.00044520001905088054, 0.00039900002381360077, 0.00421067922813286, 0.008022358432452118, 0.011834037636771377, 0.015645716841090635, 0.019457396045409896, 0.028431814192790433, 0.037406232340170965, 0.0463806504875515, 0.05535506863493203, 0.06432948678231258, 0.16037526709683156, 0.2564210474113505, 0.35246682772586957, 0.44851260804038856, 0.5445583883549076, 0.5682659319809285, 0.5919734756069494, 0.6156810192329703, 0.6393885628589911], "name": "Fugitive Emissions"}], {"barmode": "stack", "title": "Mozambique GHG Emissions by Sector"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Over half of emissions in Mozambique come from 'Land-Use Change and Forestry'. This category is potentially crowding out other factors. However, this does not appear relevant for Malawi.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Malawi">Malawi<a class="anchor-link" href="#Malawi">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span><span class="o">=</span><span class="s1">&#39;Malawi&#39;</span>
+<span class="n">fig1</span> <span class="o">=</span> <span class="n">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
+<span class="n">iplot</span><span class="p">(</span><span class="n">fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;pandas-bar-chart-layout &#39;</span><span class="o">+</span><span class="n">country</span><span class="p">);</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div id="7ccd8db0-9848-4306-aa81-dfbdc9eeeb18" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("7ccd8db0-9848-4306-aa81-dfbdc9eeeb18", [{"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [6.720190000000001, 6.2202730428914546, 5.676388085782905, 5.220439128674359, 4.698538171565811, 4.154653214457263, 4.109553923754408, 4.053462633051552, 3.986379342348697, 3.9009760516458414, 3.7789327609429857, 3.729438048110145, 3.7239113352773043, 3.740368622444464, 3.749497909611623, 3.6413791967787836, 3.7258240374395295, 3.758972878100275, 3.9643297187610216, 3.9132065594217673, 4.191843400082512, 4.262162089225533, 4.23721677836855, 4.325855467511571, 4.35953415665459], "name": "Energy"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.132052, 0.14308182455865825, 0.13945564911731653, 0.14682147367597478, 0.14685929823463306, 0.1542251227932913, 0.12877168631362135, 0.17293424983395142, 0.15114481335428145, 0.1769873768746115, 0.16252594039494156, 0.1775307279316672, 0.1412395154683928, 0.16723630300511844, 0.14560109054184406, 0.1715978780785697, 0.18298384224014055, 0.17971380640171142, 0.2057557705632823, 0.20614973472485315, 0.184559698886424, 0.19248088192300988, 0.17475406495959575, 0.25229124799618163, 0.3151724310327675], "name": "Industrial Processes"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [2.1097165, 2.2188872, 2.2193712999999997, 2.2611528, 1.8454001000000002, 2.0437757, 2.1746846, 2.1612028, 2.3089104000000003, 2.2587389, 2.4015502, 2.2173982000000003, 2.4761138000000003, 2.756228, 2.7392595, 2.806016, 3.0169913999999998, 3.3243118, 3.6805077, 3.6884698, 4.2615514999999995, 4.3618975, 4.867775, 5.217634100000001, 5.239473299999999], "name": "Agriculture"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.1607059088352582, 0.1615343073888993, 0.16236270594254038, 0.16319110449618146, 0.16401950304982255, 0.1648479016034637, 0.17064089707946412, 0.17643389255546454, 0.18222688803146497, 0.18801988350746543, 0.19381287898346589, 0.19924779400084144, 0.204682709018217, 0.2101176240355926, 0.21555253905296817, 0.22098745407034373, 0.22739291097449965, 0.23379836787865554, 0.24020382478281144, 0.24660928168696733, 0.2530147385911232, 0.2604428647715507, 0.2678709909519782, 0.2752991171324057, 0.28272724331283317], "name": "Waste"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.8556466, 6.7697445, 6.8203483, 6.5702075, 7.008854599999999, 7.0929483, 7.2780721999999995, 8.1467201, 7.486706600000001, 7.6973194000000005, 6.350812, 6.3385264, 6.6815301, 6.2819221, 6.8195587, 4.6341581, 4.6061011, 4.3272308, 4.340414000000001], "name": "Land-Use Change and Forestry"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [6.0068100000000015, 5.46280611702403, 4.918802234048059, 4.374798351072087, 3.8307944680961157, 3.286790585120144, 3.2224346338792436, 3.158078682638343, 3.0937227313974422, 3.0293667801565416, 2.965010828915641, 2.939403787435497, 2.9137967459553527, 2.8881897044752085, 2.8625826629950644, 2.836975621514921, 2.8953507548312016, 2.9537258881474826, 3.0121010214637636, 3.0704761547800445, 3.1288512880963246, 3.169687546738503, 3.2105238053806815, 3.25136006402286, 3.292196322665039], "name": "Other Fuel Combustion"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.01722, 0.017338925867423804, 0.01745785173484761, 0.017576777602271415, 0.01769570346969522, 0.01781462933711903, 0.018751289875164143, 0.019687950413209258, 0.020624610951254372, 0.021561271489299486, 0.022497932027344604, 0.020594260674648177, 0.01869058932195175, 0.016786917969255324, 0.014883246616558897, 0.012979575263862474, 0.01340128260832763, 0.013822989952792786, 0.014244697297257943, 0.0146664046417231, 0.015088111986188256, 0.01525854248702892, 0.015428972987869586, 0.01559940348871025, 0.015769833989550917], "name": "Fugitive Emissions"}], {"barmode": "stack", "title": "Malawi GHG Emissions by Sector"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>In addition to largest contributing sectors, how does Zambia fair with its neighbors if we look at emissions over time?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get total ghgs for 3 countries</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;level_0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Malawi&#39;</span><span class="p">,</span> <span class="s1">&#39;Zambia&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozambique&#39;</span><span class="p">])</span> <span class="p">]</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">df1</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;Emission Totals&#39;</span><span class="p">]</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Emission Totals&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's get population values from <a href="https://databank.worldbank.org/data/reports.aspx?source=2&amp;series=SP.POP.TOTL&amp;country=#">World Bank Data</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">merge_pop_values</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+        <span class="n">country</span><span class="o">=</span><span class="n">i</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;pop.csv&#39;</span>
+        <span class="n">df_pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/&#39;</span><span class="o">+</span> <span class="n">file</span><span class="p">)</span>
+        <span class="n">vals</span><span class="o">=</span><span class="n">df_pop</span><span class="p">[</span><span class="n">df_pop</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">values_</span><span class="o">=</span><span class="n">df_pop</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+        <span class="n">len_</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">values_</span><span class="p">)</span>
+        <span class="n">columns_</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1990</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">len_</span><span class="p">))]</span>
+        <span class="n">df1</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="s1">&#39;_pop&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">values_</span><span class="p">[:</span><span class="mi">25</span><span class="p">]</span>
+        
+    <span class="k">return</span> <span class="n">df1</span> 
+
+<span class="n">df_m</span><span class="o">=</span><span class="n">merge_pop_values</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="GHG-Emissions-Excluding-Land-Use-Change-and-Forestry-MtCO2e">GHG Emissions Excluding Land-Use Change and Forestry MtCO2e<a class="anchor-link" href="#GHG-Emissions-Excluding-Land-Use-Change-and-Forestry-MtCO2e">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_m</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_m</span><span class="o">.</span><span class="n">columns</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]]</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total MtCO2e&#39;</span><span class="p">),</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total GHG Emissions Excluding Land-Use Change and Forestry MtCO2e&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+<span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;non-show-legend.html&#39;</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div id="eb633eb3-120e-42af-a4c2-9d4e5ce9f814" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("eb633eb3-120e-42af-a4c2-9d4e5ce9f814", [{"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [9.12266440883526, 8.743776374839012, 8.197577740842764, 7.7916045068465145, 6.854817072850267, 6.517501938854018, 6.583651107147492, 6.564033575440969, 6.628661443734443, 6.5247222120279185, 6.536821780321393, 6.323614670042653, 6.545947359763915, 6.873950449485174, 6.849911039206436, 6.839980528927698, 7.1531921906541704, 7.496796852380642, 8.090797014107116, 8.05443537583359, 8.890969437560061, 9.076983335920092, 9.547616734280124, 10.07107993264016, 10.19690713100019], "name": "Malawi"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [18.243704333575074, 18.187740556897797, 18.47878918022052, 18.84152510354324, 18.76595422686596, 19.33895575018868, 19.411486446439795, 18.20178434269091, 20.15830983894202, 19.409390935193137, 18.534667731444248, 20.182619814203534, 19.000001096962823, 22.551308579722107, 21.573051662481394, 22.871703145240676, 21.75529281263267, 23.598740180024674, 25.258934447416674, 24.15189241480867, 26.51211098220067, 24.83666903839164, 25.529920594582617, 27.462917950773598, 28.426692806964567], "name": "Mozambique"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [41.55852171629234, 41.44080257975906, 41.12577534322579, 40.23965090669252, 39.11435477015923, 38.380745133625965, 37.04434460787925, 37.38492448213254, 38.56590955638583, 36.47043983063912, 35.36140070489242, 37.89329218191764, 36.947351358942875, 39.5004591359681, 41.26420101299333, 43.09624629001855, 41.28428367805557, 42.01755736609261, 43.278562554129635, 43.111559842166656, 45.798506830203685, 45.79773415705295, 48.591906483902214, 50.407438410751475, 51.20099483760074], "name": "Zambia"}], {"yaxis": {"title": "Total MtCO2e"}, "showlegend": true, "title": "Total GHG Emissions Excluding Land-Use Change and Forestry MtCO2e"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Greenhouse gas emissions increased 3 percent from 1990 - 2011, while the gross domestic product grew from US \$5.2 billion to US $13.4 billion in the same time period. This suggests that the economy became less carbon intensive during this time frame.<a href="https://www.climatelinks.org/resources/greenhouse-gas-emissions-factsheet-zambia">2</a>  Yet, globally, in 2014, Zambia was the second largest emitter of greenhouse gases due to land-use change and forestry.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Land-Use-Change-and-Forestry">Land-Use Change and Forestry<a class="anchor-link" href="#Land-Use-Change-and-Forestry">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Zambia is in the top 5 GHG emitting countries by Land-use Change and Forestry category.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_all</span><span class="p">[</span><span class="n">df_all</span><span class="o">.</span><span class="n">Year</span><span class="o">==</span><span class="mi">2014</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Land-Use Change and Forestry&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -12173,43 +12568,69 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <th>1399</th>
       <td>Asia</td>
-      <td>Afghanistan</td>
-      <td>1990</td>
-      <td>3.77404</td>
-      <td>0.0571402</td>
-      <td>7.34271</td>
-      <td>4.03895</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>1.24222</td>
+      <td>Indonesia</td>
+      <td>2014</td>
+      <td>526.994</td>
+      <td>31.4193</td>
+      <td>165.614</td>
+      <td>65.4481</td>
+      <td>1682.17</td>
+      <td>66.291</td>
+      <td>52.7425</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>Asia</td>
-      <td>Afghanistan</td>
-      <td>1991</td>
-      <td>3.3768</td>
-      <td>0.0585731</td>
-      <td>7.63103</td>
-      <td>4.22004</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>1.02085</td>
+      <th>3149</th>
+      <td>Africa</td>
+      <td>Zambia</td>
+      <td>2014</td>
+      <td>24.9459</td>
+      <td>1.17322</td>
+      <td>22.9537</td>
+      <td>2.12815</td>
+      <td>328.69</td>
+      <td>22.0244</td>
+      <td>0.0115598</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>Asia</td>
-      <td>Afghanistan</td>
-      <td>1992</td>
-      <td>1.9143</td>
-      <td>0.0636699</td>
-      <td>7.63144</td>
-      <td>4.40112</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>0.602588</td>
+      <th>349</th>
+      <td>Americas</td>
+      <td>Brazil</td>
+      <td>2014</td>
+      <td>507.231</td>
+      <td>56.3503</td>
+      <td>441.905</td>
+      <td>45.515</td>
+      <td>306.18</td>
+      <td>61.2597</td>
+      <td>9.63121</td>
+    </tr>
+    <tr>
+      <th>2899</th>
+      <td>Africa</td>
+      <td>Tanzania</td>
+      <td>2014</td>
+      <td>22.2563</td>
+      <td>1.52708</td>
+      <td>49.6957</td>
+      <td>4.60395</td>
+      <td>208.403</td>
+      <td>12.2357</td>
+      <td>0.0205437</td>
+    </tr>
+    <tr>
+      <th>2224</th>
+      <td>Africa</td>
+      <td>Nigeria</td>
+      <td>2014</td>
+      <td>160.703</td>
+      <td>10.3455</td>
+      <td>64.239</td>
+      <td>68.7987</td>
+      <td>188.355</td>
+      <td>56.3604</td>
+      <td>52.2231</td>
     </tr>
   </tbody>
 </table>
@@ -12226,528 +12647,54 @@ dropping on a non-lexsorted multi-index without a level parameter may impact per
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I'll save this merged dataset for further analysis.</p>
+<p>In fact, Zambia is second only to Indonesia. <a id='outlier'></a></p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># save target dataset to csv</span>
-<span class="n">df_all</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;ghg.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now to drill down on GHGs related to Zambia, and comparing to its neighbors.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Malawi&#39;</span><span class="p">,</span> <span class="s1">&#39;Zambia&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozambique&#39;</span><span class="p">]</span>
-<span class="k">def</span> <span class="nf">select_countries</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">lst</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">lst</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">df</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_select</span> <span class="o">=</span> <span class="n">select_countries</span><span class="p">(</span><span class="n">df_all</span><span class="p">,</span><span class="n">lst</span><span class="p">)</span>
-<span class="n">df_select_piv</span> <span class="o">=</span> <span class="n">df_select</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span> <span class="n">df_select</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">):</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_select_piv</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
-        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="n">df_select_piv</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="n">df_select_piv</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">country</span><span class="p">],</span>
-        <span class="n">name</span><span class="o">=</span><span class="n">i</span>
-        <span class="p">))</span>
-
-    <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
-        <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;stack&#39;</span><span class="p">,</span>
-        <span class="n">title</span><span class="o">=</span><span class="n">country</span><span class="o">+</span><span class="s1">&#39; GHG Emissions by Sector&#39;</span>
-    <span class="p">)</span>
-
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">fig</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span><span class="o">=</span><span class="s1">&#39;Zambia&#39;</span>
-<span class="n">fig1</span> <span class="o">=</span> <span class="n">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
-<span class="n">iplot</span><span class="p">(</span><span class="n">fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;pandas-bar-chart-layout &#39;</span><span class="o">+</span><span class="n">country</span><span class="p">);</span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div id="c888bd44-3980-4779-9096-8d421ce8fa54" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("c888bd44-3980-4779-9096-8d421ce8fa54", [{"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [20.350706420075735, 20.08076644277506, 19.62082646547439, 18.840886488173727, 18.060946510873052, 17.591006533572386, 16.83798886863971, 16.974971203707035, 16.501953538774362, 15.738935873841685, 15.375918208909011, 16.159294664372414, 16.92267111983582, 17.71604757529922, 18.409424030762622, 19.262800486226023, 19.727368098278003, 19.721935710329983, 20.526503322381963, 21.21107093443394, 21.90563854648592, 22.61821449921078, 23.730790451935643, 24.2333664046605, 24.94594235738536], "name": "Energy"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.24706793080044692, 0.21494118730765874, 0.20479844381487053, 0.20931170032208235, 0.17352095682929417, 0.189026213336506, 0.20418923237848194, 0.21935225142045786, 0.2015392704624338, 0.17273428950440972, 0.20988130854638565, 0.13164785958215966, 0.14501441061793366, 0.21334096165370764, 0.23769951268948164, 0.26572206372525564, 0.3272784146341141, 0.3228827655429727, 0.3368071164518312, 0.5009554673606897, 0.6247998182695482, 0.679465648572712, 0.8587074788758758, 0.9756613091790396, 1.1732231394822035], "name": "Industrial Processes"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [19.633674, 19.7806134, 19.898260699999998, 19.7501548, 19.4031812, 19.0865981, 18.4521784, 18.604739300000002, 20.240681300000002, 18.901160500000003, 18.082118299999998, 19.8786681, 18.1257856, 19.786991699999998, 20.802799900000004, 21.723247500000003, 19.3539132, 20.0657672, 20.477032599999998, 19.4300663, 21.2673536, 20.46748, 21.9379752, 23.1021182, 22.9536775], "name": "Agriculture"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [1.3270733654161584, 1.3644815496763416, 1.4018897339365244, 1.4392979181967076, 1.4767061024568906, 1.5141142867170738, 1.5499880068610625, 1.585861727005051, 1.6217354471490397, 1.6576091672930282, 1.6934828874370171, 1.7236815579630689, 1.7538802284891204, 1.7840788990151721, 1.8142775695412237, 1.8444762400672758, 1.8757239651434638, 1.9069716902196518, 1.9382194152958399, 1.9694671403720279, 2.0007148654482165, 2.0325741092694565, 2.064433353090697, 2.096292596911937, 2.1281518407331768], "name": "Waste"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [355.670863, 355.670863, 355.670863, 355.670863, 355.670863, 355.670863, 385.3620579, 349.2754291, 355.94384279999997, 320.8206469, 363.80640370000003, 335.1824177, 333.07069, 348.2821689, 376.2607323, 433.7613798, 366.8632892, 348.4838261, 369.4462655, 321.25498239999996, 353.60906520000003, 315.5623465, 315.61892800000004, 340.06692720000007, 328.6896731], "name": "Land-Use Change and Forestry"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [18.119241605624527, 17.579964691270305, 17.150687776916083, 16.68141086256186, 16.22213394820764, 15.87285703385342, 15.440723960243263, 15.078590886633105, 14.67645781302295, 14.274324739412792, 13.902191665802638, 14.584255360423608, 15.276319055044581, 15.968382749665551, 16.650446444286523, 17.33251013890749, 17.946905352813076, 18.541300566718657, 19.20569578062424, 19.810090994529823, 20.45448620843541, 20.826960296814025, 21.239434385192645, 21.751908473571262, 22.024382561949878], "name": "Other Fuel Combustion"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.011464814451206898, 0.010801751504758627, 0.010138688558310356, 0.009475625611862087, 0.008812562665413817, 0.008149499718965548, 0.007264908396447108, 0.006380317073928668, 0.005495725751410227, 0.004611134428891787, 0.0037265431063733456, 0.005039303948805255, 0.006352064791237164, 0.007664825633669072, 0.00897758647610098, 0.01029034731853289, 0.010462745464929042, 0.010635143611325195, 0.010807541757721348, 0.0109799399041175, 0.011152338050513652, 0.01125420239675598, 0.011356066742998307, 0.011457931089240633, 0.011559795435482962], "name": "Fugitive Emissions"}], {"barmode": "stack", "title": "Zambia GHG Emissions by Sector"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Land use and forestry accounts for well over 65% of emissions for Zambia.  This could be a result of over use of this category or a doubling up between categories.   How does Zambia compare to its neighbors in this regard?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span><span class="o">=</span><span class="s1">&#39;Mozambique&#39;</span>
-<span class="n">fig1</span> <span class="o">=</span> <span class="n">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
-<span class="n">iplot</span><span class="p">(</span><span class="n">fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;pandas-bar-chart-layout &#39;</span><span class="o">+</span><span class="n">country</span><span class="p">);</span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div id="42a6bcbb-467a-4c1a-86ae-d3abcdfd85f2" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("42a6bcbb-467a-4c1a-86ae-d3abcdfd85f2", [{"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [3.72728892920192, 3.3467239407768665, 3.3261589523518134, 3.3255939639267593, 2.9150289755017056, 2.7944639870766523, 2.765463815263784, 2.906463643450917, 2.8974634716380487, 2.9184632998251816, 3.1194631280123137, 3.15169577763943, 3.2739284272665463, 3.616161076893663, 3.698393726520779, 3.570626376147896, 3.836702468729406, 4.342778561310915, 4.4788546538924265, 4.8949307464739364, 5.221006839055448, 5.713492624477526, 5.565978409899607, 5.948464195321686, 6.920949980743766], "name": "Energy"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.040304, 0.04044066397066232, 0.014929327941324644, 0.011401991911986965, 0.02985865588264929, 0.029995319853311612, 0.11099469403456635, 0.1553540682158211, 0.17406544239707583, 0.19644081657833057, 0.2481281907595853, 0.33981993551559786, 0.5487596802716105, 0.699075425027623, 0.7687831697836356, 0.8348269145396482, 0.8341109299535319, 0.8077469453674155, 0.7923749607812991, 0.7550189761951829, 0.7506389916090666, 0.8039420593528754, 0.9122051270966844, 0.9765001948404933, 1.0810992625843023], "name": "Industrial Processes"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [13.952940000000002, 14.020895000000001, 14.1015101, 14.2118288, 14.2718566, 14.7087768, 14.675249, 13.2261284, 15.118883400000001, 14.272530000000001, 13.0910602, 14.568596900000001, 13.008314500000001, 16.0205824, 14.8438939, 16.1577779, 14.7323111, 16.0523502, 17.548144, 16.0186856, 18.0135118, 15.7440642, 16.4283501, 17.866349800000002, 17.704823], "name": "Agriculture"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.5231714043731551, 0.7796810521502676, 1.0361906999273802, 1.2927003477044927, 1.5492099954816052, 1.8057196432587177, 1.8597789371414446, 1.9138382310241713, 1.9678975249068982, 2.021956818789625, 2.076016112672352, 2.1225073010485076, 2.1689984894246637, 2.2154896778008193, 2.261980866176975, 2.3084720545531305, 2.352168313949736, 2.3958645733463406, 2.439560832742946, 2.4832570921395507, 2.526953351536157, 2.5751701545612415, 2.6233869575863262, 2.6716037606114114, 2.719820563636496], "name": "Waste"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [36.776, 36.776, 36.776, 36.776, 36.776, 36.776, 37.54, 36.664, 37.244, 36.888, 35.619, 36.6413333, 36.7033333, 37.5883333, 36.8093333, 37.8363333, 31.2746667, 31.8766667, 32.3516667, 30.384666700000004, 32.673666700000005, 38.576, 39.954, 39.253, 39.676], "name": "Land-Use Change and Forestry"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [2.87665892920192, 2.5961401407721034, 2.405621352342288, 2.225102563912471, 1.994583775482655, 1.8440649870528385, 1.9012531360356515, 1.9884412850184645, 1.8956294340012776, 1.9028175829840908, 2.120005731966904, 2.0232639634466394, 2.0565221949263752, 2.109780426406111, 2.163038657885847, 2.1962968893655828, 2.236327201632574, 2.3163575138995656, 2.3463878261665565, 2.426418138433548, 2.48644845070054, 2.5252266924965987, 2.5140049342926574, 2.542783176088716, 2.701561417884775], "name": "Other Fuel Combustion"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.00063, 0.0005838000047627202, 0.0005376000095254403, 0.0004914000142881604, 0.00044520001905088054, 0.00039900002381360077, 0.00421067922813286, 0.008022358432452118, 0.011834037636771377, 0.015645716841090635, 0.019457396045409896, 0.028431814192790433, 0.037406232340170965, 0.0463806504875515, 0.05535506863493203, 0.06432948678231258, 0.16037526709683156, 0.2564210474113505, 0.35246682772586957, 0.44851260804038856, 0.5445583883549076, 0.5682659319809285, 0.5919734756069494, 0.6156810192329703, 0.6393885628589911], "name": "Fugitive Emissions"}], {"barmode": "stack", "title": "Mozambique GHG Emissions by Sector"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Over half of emissions in Mozambique come from 'Land-Use Change and Forestry'. This category is potentially crowding out other factors. However, this does not appear relevant for Malawi.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span><span class="o">=</span><span class="s1">&#39;Malawi&#39;</span>
-<span class="n">fig1</span> <span class="o">=</span> <span class="n">plot_country</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
-<span class="n">iplot</span><span class="p">(</span><span class="n">fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;pandas-bar-chart-layout &#39;</span><span class="o">+</span><span class="n">country</span><span class="p">);</span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div id="39380c9f-1e47-4fcc-b2c1-15d1717566ca" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("39380c9f-1e47-4fcc-b2c1-15d1717566ca", [{"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [6.720190000000001, 6.2202730428914546, 5.676388085782905, 5.220439128674359, 4.698538171565811, 4.154653214457263, 4.109553923754408, 4.053462633051552, 3.986379342348697, 3.9009760516458414, 3.7789327609429857, 3.729438048110145, 3.7239113352773043, 3.740368622444464, 3.749497909611623, 3.6413791967787836, 3.7258240374395295, 3.758972878100275, 3.9643297187610216, 3.9132065594217673, 4.191843400082512, 4.262162089225533, 4.23721677836855, 4.325855467511571, 4.35953415665459], "name": "Energy"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.132052, 0.14308182455865825, 0.13945564911731653, 0.14682147367597478, 0.14685929823463306, 0.1542251227932913, 0.12877168631362135, 0.17293424983395142, 0.15114481335428145, 0.1769873768746115, 0.16252594039494156, 0.1775307279316672, 0.1412395154683928, 0.16723630300511844, 0.14560109054184406, 0.1715978780785697, 0.18298384224014055, 0.17971380640171142, 0.2057557705632823, 0.20614973472485315, 0.184559698886424, 0.19248088192300988, 0.17475406495959575, 0.25229124799618163, 0.3151724310327675], "name": "Industrial Processes"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [2.1097165, 2.2188872, 2.2193712999999997, 2.2611528, 1.8454001000000002, 2.0437757, 2.1746846, 2.1612028, 2.3089104000000003, 2.2587389, 2.4015502, 2.2173982000000003, 2.4761138000000003, 2.756228, 2.7392595, 2.806016, 3.0169913999999998, 3.3243118, 3.6805077, 3.6884698, 4.2615514999999995, 4.3618975, 4.867775, 5.217634100000001, 5.239473299999999], "name": "Agriculture"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.1607059088352582, 0.1615343073888993, 0.16236270594254038, 0.16319110449618146, 0.16401950304982255, 0.1648479016034637, 0.17064089707946412, 0.17643389255546454, 0.18222688803146497, 0.18801988350746543, 0.19381287898346589, 0.19924779400084144, 0.204682709018217, 0.2101176240355926, 0.21555253905296817, 0.22098745407034373, 0.22739291097449965, 0.23379836787865554, 0.24020382478281144, 0.24660928168696733, 0.2530147385911232, 0.2604428647715507, 0.2678709909519782, 0.2752991171324057, 0.28272724331283317], "name": "Waste"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.6969555000000005, 6.8556466, 6.7697445, 6.8203483, 6.5702075, 7.008854599999999, 7.0929483, 7.2780721999999995, 8.1467201, 7.486706600000001, 7.6973194000000005, 6.350812, 6.3385264, 6.6815301, 6.2819221, 6.8195587, 4.6341581, 4.6061011, 4.3272308, 4.340414000000001], "name": "Land-Use Change and Forestry"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [6.0068100000000015, 5.46280611702403, 4.918802234048059, 4.374798351072087, 3.8307944680961157, 3.286790585120144, 3.2224346338792436, 3.158078682638343, 3.0937227313974422, 3.0293667801565416, 2.965010828915641, 2.939403787435497, 2.9137967459553527, 2.8881897044752085, 2.8625826629950644, 2.836975621514921, 2.8953507548312016, 2.9537258881474826, 3.0121010214637636, 3.0704761547800445, 3.1288512880963246, 3.169687546738503, 3.2105238053806815, 3.25136006402286, 3.292196322665039], "name": "Other Fuel Combustion"}, {"type": "bar", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [0.01722, 0.017338925867423804, 0.01745785173484761, 0.017576777602271415, 0.01769570346969522, 0.01781462933711903, 0.018751289875164143, 0.019687950413209258, 0.020624610951254372, 0.021561271489299486, 0.022497932027344604, 0.020594260674648177, 0.01869058932195175, 0.016786917969255324, 0.014883246616558897, 0.012979575263862474, 0.01340128260832763, 0.013822989952792786, 0.014244697297257943, 0.0146664046417231, 0.015088111986188256, 0.01525854248702892, 0.015428972987869586, 0.01559940348871025, 0.015769833989550917], "name": "Fugitive Emissions"}], {"barmode": "stack", "title": "Malawi GHG Emissions by Sector"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In addition to largest contributing sectors, tt would be good to compare total emissions over time.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get total ghgs for 3 countries</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;level_0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Malawi&#39;</span><span class="p">,</span> <span class="s1">&#39;Zambia&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozambique&#39;</span><span class="p">])</span> <span class="p">]</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
-<span class="n">df1</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;Emission Totals&#39;</span><span class="p">]</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Emission Totals&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[16]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Country</th>
-      <th>year</th>
-      <th>Malawi</th>
-      <th>Mozambique</th>
-      <th>Zambia</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1990</td>
-      <td>9.12266</td>
-      <td>18.2437</td>
-      <td>41.5585</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1991</td>
-      <td>8.74378</td>
-      <td>18.1877</td>
-      <td>41.4408</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1992</td>
-      <td>8.19758</td>
-      <td>18.4788</td>
-      <td>41.1258</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1993</td>
-      <td>7.7916</td>
-      <td>18.8415</td>
-      <td>40.2397</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1994</td>
-      <td>6.85482</td>
-      <td>18.766</td>
-      <td>39.1144</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I'll extract population values from wb dataset in local dir. 
-Then use: wget <a href="https://databank.worldbank.org/data/reports.aspx?source=2&amp;series=SP.POP.TOTL&amp;country=#">https://databank.worldbank.org/data/reports.aspx?source=2&amp;series=SP.POP.TOTL&amp;country=#</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">merge_pop_values</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-    
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-        <span class="n">country</span><span class="o">=</span><span class="n">i</span>
-        <span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;pop.csv&#39;</span>
-        <span class="n">df_pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/&#39;</span><span class="o">+</span> <span class="n">file</span><span class="p">)</span>
-        <span class="n">vals</span><span class="o">=</span><span class="n">df_pop</span><span class="p">[</span><span class="n">df_pop</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">values_</span><span class="o">=</span><span class="n">df_pop</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
-        <span class="n">len_</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">values_</span><span class="p">)</span>
-        <span class="n">columns_</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1990</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">len_</span><span class="p">))]</span>
-        <span class="n">df1</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="s1">&#39;_pop&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">values_</span><span class="p">[:</span><span class="mi">25</span><span class="p">]</span>
-        
-    <span class="k">return</span> <span class="n">df1</span> 
-
-<span class="n">df_m</span><span class="o">=</span><span class="n">merge_pop_values</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_m</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[18]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Country</th>
-      <th>year</th>
-      <th>Malawi</th>
-      <th>Mozambique</th>
-      <th>Zambia</th>
-      <th>Malawi_pop</th>
-      <th>Zambia_pop</th>
-      <th>Mozambique_pop</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1990</td>
-      <td>9.12266</td>
-      <td>18.2437</td>
-      <td>41.5585</td>
-      <td>8.02725e+06</td>
-      <td>1.32476e+07</td>
-      <td>9.43755e+06</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1991</td>
-      <td>8.74378</td>
-      <td>18.1877</td>
-      <td>41.4408</td>
-      <td>8.23973e+06</td>
-      <td>1.3592e+07</td>
-      <td>9.64115e+06</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1992</td>
-      <td>8.19758</td>
-      <td>18.4788</td>
-      <td>41.1258</td>
-      <td>8.45228e+06</td>
-      <td>1.40712e+07</td>
-      <td>9.72972e+06</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1993</td>
-      <td>7.7916</td>
-      <td>18.8415</td>
-      <td>40.2397</td>
-      <td>8.66917e+06</td>
-      <td>1.4637e+07</td>
-      <td>9.75586e+06</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1994</td>
-      <td>6.85482</td>
-      <td>18.766</td>
-      <td>39.1144</td>
-      <td>8.89611e+06</td>
-      <td>1.5217e+07</td>
-      <td>9.79698e+06</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Then calculate emissions on a total vs per capita basis.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
-    <span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39;_MtCO2e_pc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39;_pop&#39;</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_s</span><span class="o">=</span><span class="n">df_m</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">6</span><span class="p">:]</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">land_use_2014</span> <span class="o">=</span> <span class="n">df_all</span><span class="p">[</span><span class="n">df_all</span><span class="o">.</span><span class="n">Year</span><span class="o">==</span><span class="mi">2014</span><span class="p">][</span><span class="s1">&#39;Land-Use Change and Forestry&#39;</span><span class="p">]</span>
 
-</div>
-</div>
-</div>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Histogram</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">land_use_2014</span><span class="p">,</span> <span class="n">xbins</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">))]</span>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_m</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_m</span><span class="o">.</span><span class="n">columns</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]]</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total MtCO2e&#39;</span><span class="p">),</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total GHG Emissions Excluding Land-Use Change and Forestry MtCO2e&#39;</span><span class="p">)</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Number of Countries&#39;</span><span class="p">),</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;MtCO2e&#39;</span><span class="p">),</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;GHG Emissions by Land-Use Change and Forestry (2014)&#39;</span><span class="p">,</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">annotations</span><span class="o">=</span><span class="p">[</span>
+        <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="mi">328</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">xref</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+            <span class="n">yref</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+            <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Zambia&#39;</span><span class="p">,</span>
+            <span class="n">showarrow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">arrowhead</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+            <span class="n">ax</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">ay</span><span class="o">=-</span><span class="mi">260</span>
+        <span class="p">),</span>
+        <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="mi">1668</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span>
+            <span class="n">xref</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+            <span class="n">yref</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+            <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Indonesia&#39;</span><span class="p">,</span>
+            <span class="n">showarrow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">arrowhead</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+            <span class="n">ax</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">ay</span><span class="o">=-</span><span class="mi">200</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
 <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
-<span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;non-show-legend.html&#39;</span><span class="p">);</span>
+<span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;basic histogram&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12765,7 +12712,7 @@ Then use: wget <a href="https://databank.worldbank.org/data/reports.aspx?source=
 
 
 <div class="output_html rendered_html output_subarea ">
-<div id="3c8f20f9-b66a-40a2-b0b9-1040b861d41d" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("3c8f20f9-b66a-40a2-b0b9-1040b861d41d", [{"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [9.12266440883526, 8.743776374839012, 8.197577740842764, 7.7916045068465145, 6.854817072850267, 6.517501938854018, 6.583651107147492, 6.564033575440969, 6.628661443734443, 6.5247222120279185, 6.536821780321393, 6.323614670042653, 6.545947359763915, 6.873950449485174, 6.849911039206436, 6.839980528927698, 7.1531921906541704, 7.496796852380642, 8.090797014107116, 8.05443537583359, 8.890969437560061, 9.076983335920092, 9.547616734280124, 10.07107993264016, 10.19690713100019], "name": "Malawi"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [18.243704333575074, 18.187740556897797, 18.47878918022052, 18.84152510354324, 18.76595422686596, 19.33895575018868, 19.411486446439795, 18.20178434269091, 20.15830983894202, 19.409390935193137, 18.534667731444248, 20.182619814203534, 19.000001096962823, 22.551308579722107, 21.573051662481394, 22.871703145240676, 21.75529281263267, 23.598740180024674, 25.258934447416674, 24.15189241480867, 26.51211098220067, 24.83666903839164, 25.529920594582617, 27.462917950773598, 28.426692806964567], "name": "Mozambique"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [41.55852171629234, 41.44080257975906, 41.12577534322579, 40.23965090669252, 39.11435477015923, 38.380745133625965, 37.04434460787925, 37.38492448213254, 38.56590955638583, 36.47043983063912, 35.36140070489242, 37.89329218191764, 36.947351358942875, 39.5004591359681, 41.26420101299333, 43.09624629001855, 41.28428367805557, 42.01755736609261, 43.278562554129635, 43.111559842166656, 45.798506830203685, 45.79773415705295, 48.591906483902214, 50.407438410751475, 51.20099483760074], "name": "Zambia"}], {"yaxis": {"title": "Total MtCO2e"}, "showlegend": true, "title": "Total GHG Emissions Excluding Land-Use Change and Forestry MtCO2e"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="bae6940c-093d-44b3-8509-48ac1242c721" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("bae6940c-093d-44b3-8509-48ac1242c721", [{"type": "histogram", "x": [0, -0.3577027, -0.402, 94.27610120000001, 94.6084471, -66.52182450000001, -4.8918171, -0.0048592, 29.2218662, -2.6286958, 10.828, 85.7137377, 22.378008, 306.1797876, -9.914903700000002, 9.097, 2.2572073, 23.7783333, 113.42075969999999, 121.8877858, 13.325355, 25.2083333, -104.93869620000001, -311.0825453, 19.5152627, 0.067, -11.363019000000001, 5.468189000000001, -3.8426517, -13.9626667, -12.4961263, -0.49481, 0, -8.7006667, 33.8998882, -0.2185333, 0.7328309000000001, 5.360312700000001, 0.6600869, 18.5138282, 5.7148152, -78.83576730000001, -94.1602398, -0.2443333, -37.3670227, 8.3089944, -0.6770509, 7.546, 14.1442856, 1.4726667, 0.1378667, 28.125666700000004, 4.2473405, -0.1833333, 122.4955315, 1682.1670492, 67.07858, -2.0404279, -0.4392724, -0.07333329999999999, -34.285584799999995, 0.7785125, 7.4613401, 0, -31.2357772, -0.0154578, -0.0044, -0.193, 1.3578421, 0, 21.6875384, 4.340414000000001, -129.01539000000002, 7.166333300000001, -1.518, -0.014666700000000001, 7.4463333, 24.604457, 0.061897, -1.4656667, 39.676, 105.1078174, 8.9496645, 6.542080299999999, 1.1600068000000001, -15.4025801, 0.22596, 1.5456667, 188.3553333, -21.9485423, -0.0049465, 28.601, 8.547575, 143.31552720000002, 71.8462363, -60.2973333, -25.1091726, 1.7638172, -163.7686164, 0.8617412000000001, 0, 5.134, -1.3148488, 6.1143333, 0.0440969, -6.2447195, 13.201, 2.3218365, -33.1529486, 4.4914881, 120.36016710000001, 0.24502359999999998, -3.9603212000000005, -1.5522976000000002, -1.2123637, 208.40347880000002, 15.9662024, 6.5754388, -0.2863333, -64.86088480000001, 25.8121295, -12.2157853, -10.5186525, 66.399625, -18.3530264, 328.6896731, 36.0673333], "xbins": {"size": 50}}], {"yaxis": {"title": "Number of Countries"}, "xaxis": {"title": "MtCO2e"}, "title": "GHG Emissions by Land-Use Change and Forestry (2014)", "showlegend": false, "annotations": [{"x": 328, "y": 2, "xref": "x", "yref": "y", "text": "Zambia", "showarrow": true, "arrowhead": 7, "ax": 0, "ay": -260}, {"x": 1668, "y": 1.8, "xref": "x", "yref": "y", "text": "Indonesia", "showarrow": true, "arrowhead": 7, "ax": 0, "ay": -200}]}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 </div>
 
 </div>
@@ -12773,14 +12720,33 @@ Then use: wget <a href="https://databank.worldbank.org/data/reports.aspx?source=
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Categorized emissions are important, but what about total emissions on a per capita basis? Say as compared with neighbors?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Per-Capita-GHG-Emissions-Excluding-Land-Use-Change-and-Forestry">Per Capita GHG Emissions Excluding Land-Use Change and Forestry<a class="anchor-link" href="#Per-Capita-GHG-Emissions-Excluding-Land-Use-Change-and-Forestry">&#182;</a></h4>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># per capita ghg</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39;_MtCO2e_pc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_m</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39;_pop&#39;</span><span class="p">])</span>
+<span class="n">df_s</span><span class="o">=</span><span class="n">df_m</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">6</span><span class="p">:]</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_s</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df_s</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_s</span><span class="o">.</span><span class="n">columns</span><span class="p">)]</span>
 <span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total MtCO2e&#39;</span><span class="p">),</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total Per Capita GHG Emissions Excluding Land-Use Change and Forestry MtCO2e&#39;</span><span class="p">)</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
@@ -12802,7 +12768,7 @@ Then use: wget <a href="https://databank.worldbank.org/data/reports.aspx?source=
 
 
 <div class="output_html rendered_html output_subarea ">
-<div id="b1f0a9c5-6781-45d6-b82b-c9fb1d5951f2" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("b1f0a9c5-6781-45d6-b82b-c9fb1d5951f2", [{"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [1.1364615527672119e-06, 1.0611724234282149e-06, 9.698664254112371e-07, 8.987718898568483e-07, 7.705410391048791e-07, 7.133027267750964e-07, 7.008130785577614e-07, 6.790441845543448e-07, 6.661821325564573e-07, 6.371977002509952e-07, 6.207088219230603e-07, 5.842148598655922e-07, 5.886426802974527e-07, 6.018175519669065e-07, 5.838782257309727e-07, 5.675316954848326e-07, 5.77641489344256e-07, 5.890941512516561e-07, 6.184434550405794e-07, 5.985572070064112e-07, 6.419457222636265e-07, 6.363223693360119e-07, 6.495005205995186e-07, 6.646169315042925e-07, 6.527702517781663e-07], "name": "Malawi_MtCO2e_pc"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [3.137048824005855e-06, 3.048918043503558e-06, 2.9226849692984067e-06, 2.7491743289310763e-06, 2.570430549465404e-06, 2.435460603644031e-06, 2.279900028992647e-06, 2.2384371469189853e-06, 2.2504758511450714e-06, 2.0739671038003824e-06, 1.957162569004678e-06, 2.0385058637009336e-06, 1.9304081274045164e-06, 2.0034114980671665e-06, 2.0314478555659296e-06, 2.05974774686595e-06, 1.9159695820364363e-06, 1.8936733601271967e-06, 1.894297762252729e-06, 1.8326578976670252e-06, 1.8908278372044761e-06, 1.8363897900919845e-06, 1.8924583133729674e-06, 1.9068899541381757e-06, 1.8815330035276125e-06], "name": "Zambia_MtCO2e_pc"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [1.9330968878876838e-06, 1.8864694458119061e-06, 1.899211372768655e-06, 1.931303944240187e-06, 1.9154843521986747e-06, 1.951638309215609e-06, 1.920068405625458e-06, 1.7532292706925704e-06, 1.8831192823426717e-06, 1.7574035946680039e-06, 1.6292534722087754e-06, 1.7256204022057656e-06, 1.5815263990421297e-06, 1.827987415075223e-06, 1.7018765376438122e-06, 1.754003838370396e-06, 1.6199916877511714e-06, 1.7049919106115096e-06, 1.7699194370589589e-06, 1.6413554654627201e-06, 1.7480019069044317e-06, 1.5892805313254804e-06, 1.585974832096591e-06, 1.6566733679066486e-06, 1.665414646677446e-06], "name": "Mozambique_MtCO2e_pc"}], {"yaxis": {"title": "Total MtCO2e"}, "showlegend": true, "title": "Total Per Capita GHG Emissions Excluding Land-Use Change and Forestry MtCO2e"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="14edb01b-f817-4f9c-89b8-a7385ac8c161" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("14edb01b-f817-4f9c-89b8-a7385ac8c161", [{"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [1.1364615527672119e-06, 1.0611724234282149e-06, 9.698664254112371e-07, 8.987718898568483e-07, 7.705410391048791e-07, 7.133027267750964e-07, 7.008130785577614e-07, 6.790441845543448e-07, 6.661821325564573e-07, 6.371977002509952e-07, 6.207088219230603e-07, 5.842148598655922e-07, 5.886426802974527e-07, 6.018175519669065e-07, 5.838782257309727e-07, 5.675316954848326e-07, 5.77641489344256e-07, 5.890941512516561e-07, 6.184434550405794e-07, 5.985572070064112e-07, 6.419457222636265e-07, 6.363223693360119e-07, 6.495005205995186e-07, 6.646169315042925e-07, 6.527702517781663e-07], "name": "Malawi_MtCO2e_pc"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [3.137048824005855e-06, 3.048918043503558e-06, 2.9226849692984067e-06, 2.7491743289310763e-06, 2.570430549465404e-06, 2.435460603644031e-06, 2.279900028992647e-06, 2.2384371469189853e-06, 2.2504758511450714e-06, 2.0739671038003824e-06, 1.957162569004678e-06, 2.0385058637009336e-06, 1.9304081274045164e-06, 2.0034114980671665e-06, 2.0314478555659296e-06, 2.05974774686595e-06, 1.9159695820364363e-06, 1.8936733601271967e-06, 1.894297762252729e-06, 1.8326578976670252e-06, 1.8908278372044761e-06, 1.8363897900919845e-06, 1.8924583133729674e-06, 1.9068899541381757e-06, 1.8815330035276125e-06], "name": "Zambia_MtCO2e_pc"}, {"type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014], "y": [1.9330968878876838e-06, 1.8864694458119061e-06, 1.899211372768655e-06, 1.931303944240187e-06, 1.9154843521986747e-06, 1.951638309215609e-06, 1.920068405625458e-06, 1.7532292706925704e-06, 1.8831192823426717e-06, 1.7574035946680039e-06, 1.6292534722087754e-06, 1.7256204022057656e-06, 1.5815263990421297e-06, 1.827987415075223e-06, 1.7018765376438122e-06, 1.754003838370396e-06, 1.6199916877511714e-06, 1.7049919106115096e-06, 1.7699194370589589e-06, 1.6413554654627201e-06, 1.7480019069044317e-06, 1.5892805313254804e-06, 1.585974832096591e-06, 1.6566733679066486e-06, 1.665414646677446e-06], "name": "Mozambique_MtCO2e_pc"}], {"yaxis": {"title": "Total MtCO2e"}, "showlegend": true, "title": "Total Per Capita GHG Emissions Excluding Land-Use Change and Forestry MtCO2e"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 </div>
 
 </div>
@@ -12810,6 +12776,16 @@ Then use: wget <a href="https://databank.worldbank.org/data/reports.aspx?source=
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Zambia is not far off Mozambique on a per capita basis, where the two countries appear to have flat growth in emissions.  However if we include land-use change and forestry, <a href="#outlier">Zambia appears to be an outlier compared to its neighbors and globally</a></p>
+</blockquote>
+
+</div>
+</div>
 </div>
     </div>
   </div>
